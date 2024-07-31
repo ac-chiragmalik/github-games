@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: github-games
+  annotations:
+    github.com/project-slug: ac-chiragmalik/github-games
+spec:
+  type: other
+  lifecycle: unknown
+  owner: chiragGroup
