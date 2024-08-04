@@ -3,6 +3,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: github-games
+  description: This is my github game component
   annotations:
     github.com/project-slug: ac-chiragmalik/github-games
 spec:
@@ -11,59 +12,13 @@ spec:
   owner: chiragGroup
 
 ---
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: backstage
-  description: An example of a Backstage application.
-  annotations:
-    github.com/project-slug: backstage/backstage
-spec:
-  lifecycle: production
-  type: website
-  owner: john@example.com
-
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: backstage-test-comp
-  description: A test component for Backstage.
-spec:
-  lifecycle: production
-  type: website
-  owner: john@example.com
-
----
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: guests
+  name: chiragGroup
 spec:
   type: team
   children: []
   
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: chiragmalik31
-spec:
-  memberOf: [guests]
-  profile:
-    email: chiragmalik31@demo.com
-    displayName: Chirag Malik
-    name: Chirag Malik   
 
----
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: malik
-spec:
-  memberOf: [guests]
-  profile:
-    email: malik@xyz.com
-    displayName: Malik
-    name: Malik    
