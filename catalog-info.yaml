@@ -6,7 +6,7 @@ metadata:
     github.com/project-slug: ac-chiragmalik/github-games
 spec:
   type: other
-  lifecycle: unknown
+  lifecycle: development
   owner: chiragGroup
 
 ---  
@@ -21,6 +21,7 @@ metadata:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:
+  lifecycle: production
   type: website
   owner: john@example.com
 
@@ -36,6 +37,7 @@ metadata:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
 spec:
+  lifecycle: production
   type: org web
   owner: john@example.com
 
@@ -45,6 +47,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: cmguests
+  lifecycle: production
 spec:
   type: team
   children: []
@@ -71,7 +74,7 @@ metadata:
   name: malik
 spec:
   memberOf: [cmguests]
-  lifecycle: production
+  lifecycle: development
   profile:
     email: malik@xyz.com
     displayName: malik
