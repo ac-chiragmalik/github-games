@@ -35,23 +35,22 @@ spec:
   owner: john@example.com
 
 ---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: cmguests
+  name: guests
 spec:
   type: team
-  profile:
-    displayName: CM Guests
   children: []
-
+  
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: chiragmalik31
 spec:
-  memberOf: [cmguests]
+  memberOf: [guests]
   profile:
     email: chiragmalik31@demo.com
     displayName: Chirag Malik
@@ -63,7 +62,7 @@ kind: User
 metadata:
   name: malik
 spec:
-  memberOf: [cmguests]
+  memberOf: [guests]
   profile:
     email: malik@xyz.com
     displayName: Malik
