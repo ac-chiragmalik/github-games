@@ -4,13 +4,38 @@ kind: Component
 metadata:
   name: github-games
   description: This is my github game component
+  tags:
+    - game
+    - enjoy
   annotations:
     github.com/project-slug: ac-chiragmalik/github-games
 spec:
   type: other
   lifecycle: development
-  owner: chiragGroup
+  owner: dragon
 
 
   
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: dragon
+spec:
+  type: team
+  children: []
 
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: destroyer
+spec:
+  memberOf: [dragon]
+  lifecycle: production
+  profile:
+    email: destroyer@xyz.io
+    displayName: destroyer
+    name: destroyer   
