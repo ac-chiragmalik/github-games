@@ -13,9 +13,29 @@ spec:
   type: other
   lifecycle: development
   owner: dragon
+  system: gameystem
+  domain: gamedomain
 
+---
 
-  
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: gameystem
+  description: A game system
+spec:
+  owner: destroyer@xyz.io
+  domain: gamedomain
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: gamedomain
+  description: An gamne domain 
+spec:
+  owner: destroyer@xyz.io
+
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
